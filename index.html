@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pars.ngo</title>
+  <title>PARS.NGO</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -11,31 +11,120 @@
       background: #000;
       color: #fff;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
-    .container { text-align: center; padding: 2rem; max-width: 600px; }
-    h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
-    p { font-size: 1.25rem; color: #888; margin-bottom: 2rem; line-height: 1.6; }
-    .badge { display: inline-block; padding: 0.5rem 1rem; background: #111; border: 1px solid #333; border-radius: 9999px; font-size: 0.875rem; color: #888; }
-    a { color: #fff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .links { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .links a { padding: 0.75rem 1.5rem; background: #fff; color: #000; border-radius: 9999px; font-weight: 500; }
-    .links a:hover { background: #eee; text-decoration: none; }
+    .header {
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 1rem 2rem;
+      font-family: monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.4);
+      display: flex;
+      justify-content: space-between;
+    }
+    .container {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .label {
+      font-family: monospace;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      margin-bottom: 2rem;
+    }
+    h1 span { color: #D4AF37; }
+    p {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      font-weight: 300;
+    }
+    .links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .links a {
+      padding: 0.75rem 1.5rem;
+      background: #D4AF37;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+    }
+    .links a:hover { background: #fff; }
+    .links a.outline {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .links a.outline:hover {
+      background: #fff;
+      color: #000;
+    }
+    .stats {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 4rem;
+      padding-top: 2rem;
+      display: flex;
+      gap: 3rem;
+      font-family: monospace;
+      font-size: 0.75rem;
+    }
+    .stats div span { color: rgba(255,255,255,0.4); text-transform: uppercase; }
+    .stats div strong { color: #D4AF37; margin-left: 0.5rem; }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 1rem 2rem;
+      font-family: monospace;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+  <div class="header">
+    <span>پارس</span>
+    <span>Non-Profit Organization</span>
+  </div>
   <div class="container">
-    <div class="badge">Coming Soon</div>
-    <h1>pars.ngo</h1>
-    <p>Non-profit initiatives and community governance for the Pars ecosystem.</p>
+    <p class="label">Pars Protocol Foundation</p>
+    <h1>PARS.<span>NGO</span></h1>
+    <p>Non-profit initiatives and community governance for the Persian diaspora. Building decentralized civic infrastructure.</p>
     <div class="links">
-      <a href="https://pars.network">Pars Network</a>
-      <a href="https://github.com/parsdao">GitHub</a>
+      <a href="https://pars.vote">Governance</a>
+      <a href="https://docs.pars.vote" class="outline">Documentation</a>
     </div>
+    <div class="stats">
+      <div><span>Chain</span><strong>494949</strong></div>
+      <div><span>Committees</span><strong>10</strong></div>
+      <div><span>Status</span><strong>Active</strong></div>
+    </div>
+  </div>
+  <div class="footer">
+    Your protocol. Your vote.
   </div>
 </body>
 </html>
